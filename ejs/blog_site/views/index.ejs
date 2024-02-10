@@ -1,0 +1,37 @@
+<%- include("partials/header.ejs") %>
+
+<%   function truncate(str) {%>
+<%  return str.length > 100 ? str.slice(0, 100 - 1) + " ..." : str;%>
+<%  } %>
+
+
+
+<h1>Journal</h1>
+
+<% let titles=[];%>
+<% let bodies=[];%>
+
+<% for (let i=0; i < all_post.length;i++) { %>
+<% titles.push(all_post[i].title); %>
+<% bodies.push(truncate(all_post[i].body)); %>
+<% } %>
+
+<% for(let i=0;i<titles.length;i++){ %>
+<h1>
+    <%= titles[i] %>
+</h1>
+<p>
+    <%= bodies[i] %>
+    <a href="/posts/<%= titles[i]%>">read more</a>
+</p>
+<% } %>
+
+
+
+<%# all_post.forEach(function(post){ %>
+<%#console.log(post.title)%>
+<%#console.log(post.body)%>
+<%#})%>
+<!-- foreach loop diyeo lekha jay -->
+
+<% -include("partials/footer.ejs")%>
