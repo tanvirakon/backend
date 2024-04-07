@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+<h1><%= title %></h1>
+<form action="/" method="post">
+  <input type="text" name="new_input" />
+  <button type="submit" class="btn btn-outline-info" name="list" value=<%= title %>>submit</button>
+</form>
+<% if(locals.list){ %>
+<% list.forEach((element)=> { %>
+<ul>
+  <li><%=element.title %></li>
+</ul>
+<% }) %> <% } %>
+<form action="/dlt" method="post">
+  <button type="submit" class="btn btn-outline-warning" name="list" value=<%= title %>>dlt</button>
+</form>
+<%- include("partials/footer.ejs") %>
