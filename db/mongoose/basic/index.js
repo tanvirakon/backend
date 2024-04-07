@@ -7,7 +7,14 @@ const port = 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static("./public"));
-mongoose.connect("mongodb://127.0.0.1:27017/fruitDB");
+mongoose
+  .connect("mongodb://127.0.0.1:27017/fruitDB")
+  .then(function () {
+    console.log("connected with mongoose");
+  })
+  .catch(function (err) {
+    console.log(err);
+  });
 
 const FruitSchema = new mongoose.Schema({
   name: {
