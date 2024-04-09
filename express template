@@ -25,3 +25,5 @@ app.listen(port, () => {
 
 
 -- ejs ahouting dile  "type": "module", paste kre dbo package.json e 
+-- npm i express body-parser ejs 
+
