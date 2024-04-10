@@ -139,6 +139,14 @@ Fruit.find()
     console.log(err);
   });
 
+//findone
+// .post(async (req, res) => {
+//     const FoundUser = await user.find({ email: req.body.email });
+//     console.log(FoundUser);
+//   });
+// if(FoundeUser) do domethin
+//   else do somethin
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
