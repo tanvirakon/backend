@@ -4,7 +4,7 @@ function Template(props) {
   const emojiList = props.emojiList;
 
   //2ta return
-  //map r vitrer function ta alada likhe nclm
+  //map r vitrer callback function ta alada likhe nclm : bujar subidhar jnno. pore map r mddheoi direct bpsay dc
 
   return (
     <dl className="dictionary">
