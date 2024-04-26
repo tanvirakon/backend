@@ -95,6 +95,7 @@ const lemon = new Fruit({
 //   .catch(function (err) {
 //     console.log(err);
 //   });
+//uodate e jdi async await na dei taile then() catch()  lgbe , async dile r edi lgbe na
 
 //delete
 Fruit.deleteOne({ id:"661026943cca9fefc1168d59"})
