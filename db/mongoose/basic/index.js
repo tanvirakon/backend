@@ -43,6 +43,11 @@ const fruit = new Fruit({
 // fruit.save();
 // comment na krle bar bar chlebe & i will get whole bunch of apple
 
+//or.....save() na diye, create() function use
+//const fruit = await Fruit.create(newBook);
+
+
+
 //same fruitdb te person namer arekta collection krte chai
 
 const personSchema = mongoose.Schema({
