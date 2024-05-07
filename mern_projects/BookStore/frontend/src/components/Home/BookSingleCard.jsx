@@ -1,6 +1,7 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+import React, { useState } from "react";
 import { PiBookOpenText } from "react-icons/pi";
-import { BiUserCircle } from "react-icons/bi";
+import { BiUserCircle, BiShow } from "react-icons/bi";
 import { AiOutlineEdit } from "react-icons/ai";
 import { BsInfoCircle } from "react-icons/bs";
 import { MdOutlineDelete } from "react-icons/md";
@@ -8,6 +9,7 @@ import { Link } from "react-router-dom";
 import BookModal from "./BookModal";
 
 function BookSingleCard({ book }) {
+  const [show, setShow] = useState(false);
   return (
     <div
       key={book._id}
@@ -25,8 +27,12 @@ function BookSingleCard({ book }) {
         <BiUserCircle className="text-sky-400" />
         <h2 className="">{book.author}</h2>
       </div>
-      <BookModal />
       <div className="flex justify-evenly gap-x-4">
+        <BiShow className="text-blue-500 hover:text-black cursor-pointer"
+          onClick={() => {
+            setShow(true);
+          }}
+        />
         <Link to={`/books/details/${book._id}`}>
           <BsInfoCircle className="text-green-400 hover:text-black" />
         </Link>
@@ -37,6 +43,7 @@ function BookSingleCard({ book }) {
           <MdOutlineDelete className="text-red-400 hover:text-black" />
         </Link>
       </div>
+      {show && <BookModal book={book} onClose={() => setShow(false)} />}
     </div>
   );
 }
