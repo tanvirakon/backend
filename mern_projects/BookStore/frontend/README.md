@@ -9,6 +9,6 @@ Currently, two official plugins are available:
 
 ---
 
-create frontend using vite with react
-command
-npm create vite@latest
+- create frontend using vite with react
+- command
+- npm create vite@latest
