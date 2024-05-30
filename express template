@@ -10,7 +10,7 @@ app.use(express.static("./public"));
 
 app.get("/", (req, res) => {
   console.log("YAPPI");
-  res.render("index.ejs");
+  res.send("moshi moshi");
 });
 
 app.get("/get-secret", async (req, res) => {
