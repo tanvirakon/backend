@@ -12,6 +12,7 @@ function CreateBook() {
   const [loading, setLoading] = useState(false);
   const { enqueueSnackbar } = useSnackbar();
   const navigate = useNavigate();
+
   const handleSaveBook = () => {
     const data = {
       title,
@@ -19,6 +20,7 @@ function CreateBook() {
       publishYear,
     };
     setLoading(true);
+    
     axios
       .post("http://localhost:3000/book", data)
       .then((res) => {

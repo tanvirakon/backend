@@ -3,7 +3,6 @@ import Header from "./header";
 import Note from "./note";
 import CreateArea from "./CreateArea";
 import { useState } from "react";
-// import Play from "./play";
 
 function App() {
   const [list, setList] = useState([]);

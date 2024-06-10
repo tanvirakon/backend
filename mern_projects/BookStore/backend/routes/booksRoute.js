@@ -5,15 +5,28 @@ import { book } from "../models/bookModel.js"; //model
 //post a new book
 router.post("/", async (req, res) => {
   try {
-    const { title, author, publishYear } = req.body;
+    const { title, author, publishYear } = req.body; //frontend theke "data" pathaiclm...remember?!
+    // const newBook = {
+    //   title,
+    //   author,
+    //   publishYear,
+    // };
+
+    // const newBook = (req.body);
+
     const newBook = {
       title: title,
       author: author,
       publishYear: publishYear,
     };
-    // const Book = new book(newBook);
-    // Book.save();
+    //all 3 of them are same when variable names match the property names.
+
+    //////////////////////save the modal/////////////////
+
+    // const Book = new book(newBook); //create model
+    // Book.save(); //model save
     // or
+
     const Book = await book.create(newBook);
     console.log(Book);
     res.status(200).send(Book);

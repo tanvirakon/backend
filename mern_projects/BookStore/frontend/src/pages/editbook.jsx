@@ -46,7 +46,7 @@ function EditBook() {
       <BackButton />
       <h1>Edit book</h1>
       {loading ? <Spinner /> : null}
-      <div className="flex flex-col border rounded-sm border-slate-400 w-[400px] p-4">
+      <div className="flex flex-col border rounded-md mt-4 border-slate-400 w-[400px] p-4">
         <div className="my-2">
           <label className="mr-4">Title</label>
           <input

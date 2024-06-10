@@ -53,6 +53,7 @@ function CreateArea({ submitted }) {
           onChange={newEntry}
           onClick={textClicled}
         />
+        
         <Zoom in={show}>
           <Fab onClick={clicked}>
             <AddCircleOutlineIcon />
